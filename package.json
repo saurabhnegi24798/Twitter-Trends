@@ -8,8 +8,9 @@
     "build": "cd frontend && npm run build",
     "install-client": "cd frontend && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
-    "dev": "concurrently 'cd frontend && npm start' 'nodemon app.js' ",
-    "start": "nodemon app.js"
+    "client": "cd frontend && npm start",
+    "dev": "concurrently 'cd frontend && npm start' 'npm run start' ",
+    "start": "concurrently 'cd frontend && npm start' 'node app.js' "
   },
   "keywords": [],
   "author": "saurabh negi",
